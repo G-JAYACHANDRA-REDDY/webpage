@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LADDU FAMILY DHABA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('image2.jpg'); /* Replace with your new image URL */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #3a3939;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-image: url('https://example.com/new-header-background.jpg'); /* Replace with your new image URL */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(249, 228, 4, 0); /* Dark overlay for text readability */
+            z-index: 1;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3em;
+            margin: 0;
+            animation: slideInFromTop 2s ease-in-out;
+        }
+
+        header p {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            font-size: 1.2em;
+            animation: slideInFromBottom 2s ease-in-out;
+        }
+
+        @keyframes slideInFromTop {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+
+        .container {
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+            background-color: rgba(255, 255, 255, 0.607); /* Slightly transparent to blend with the background */
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+            background-image: url('https://example.com/new-menu-background.jpg'); /* Replace with your new image URL */
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border-radius: 10px;
+            color: #ffffffae;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeSlideIn 1s forwards ease-in-out;
+        }
+
+        @keyframes fadeSlideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-section h3 {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for text readability */
+            color: #ffffffaa;
+            padding: 10px;
+            text-align: center;
+            margin: 0 -20px 20px;
+            transform: translateX(-100%);
+            animation: slideIn 0.8s forwards ease-in-out;
+        }
+
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .menu-item {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            border: 1px solid #dddddddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            transform: scale(0.9);
+            opacity: 0;
+            animation: fadeInAndGrow 1s forwards ease-in-out;
+            display: flex; /* Flexbox for better image and text alignment */
+            align-items: center;
+        }
+
+        .menu-item img {
+            max-width: 150px; /* Adjust the size as needed */
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .menu-item:nth-child(odd) {
+            animation-delay: 0.3s;
+        }
+
+        .menu-item:nth-child(even) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fadeInAndGrow {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            color: #000000;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            color: #000000;
+        }
+
+        #contact {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            transform: translateY(50px);
+            opacity: 0;
+            animation: fadeSlideIn 1s forwards ease-in-out;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Parallax effect */
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Hover effects */
+        .menu-item:hover {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<header class="parallax">
+    <h1>LADDU FAMILY DHABA</h1>
+    <h2>The Village Restaurant</h2>
+    <p>Welcome to our cozy place!</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+    <section id="home">
+        <h2>Welcome to LADDU FAMILY DHABA</h2>
+        <p><br><br></p>
+        <h3>At our restaurant, </h3>
+        <h3>we serve delicious food made with fresh ingredients. </h3>
+        <h3>Join us for a wonderful dining experience!</h3>
+    </section>
+    <p><br><br></p>
+
+    <section id="menu">
+        <h1>Our Menu</h1>
+        
+        <div class="menu-section parallax">
+            <h3>Starters</h3>
+            <div class="menu-item">
+                <img src="tomato-soup.jpg" alt="Tomato Soup"> <!-- Replace with your image URL -->
+                <div>
+                    <h3>Tomato Soup</h3>
+                    <p>Rich tomato soup served with bread.</p>
+                    <p>Price: $5.99</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="bruschetta.jpg" alt="Bruschetta"> <!-- Replace with your image URL -->
+                <div>
+                    <h3>Bruschetta</h3>
+                    <p>Grilled bread topped with tomatoes and basil.</p>
+                    <p>Price: $6.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section parallax">
+            <h3>Main Courses</h3>
+            <div class="menu-item">
+                <img src="grilled-chicken.jpg" alt="Grilled Chicken"> <!-- Replace with your image URL -->
+                <div>
+                    <h3>Grilled Chicken</h3>
+                    <p>Marinated chicken breast served with vegetables.</p>
+                    <p>Price: $14.99</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="spaghetti-bolognese.jpg" alt="Spaghetti Bolognese"> <!-- Replace with your image URL -->
+                <div>
+                    <h3>Spaghetti Bolognese</h3>
+                    <p>Spaghetti with a rich meat sauce.</p>
+                    <p>Price: $12.99</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-section parallax">
+            <h3>Desserts</h3>
+            <div class="menu-item">
+                <img src="cheesecake.jpg" alt="Cheesecake"> <!-- Replace with your image URL -->
+                <div>
+                    <h3>Cheesecake</h3>
+                    <p>Creamy cheesecake with a graham cracker crust.</p>
+                    <p>Price: $7.99</p>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chocolate-cake.jpg" alt="Chocolate Cake"> <!-- Replace with your image URL -->
+                <div>
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich chocolate cake with a molten center.</p>
+                    <p>Price: $8.99</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: </p>
+        <p>9177299980</p>
+        <p>7483066864</p>
+        <p><br><br></p>
+        <p>Address: </p>
+        <p>Gudiyatham Road, </p>
+        <p>Berupalli Village, </p>
+        <p>Palamaner Mandal, </p>
+        <p>pincode : 517408. </p>
+        <p><br><br></p>
+        <p>Email: jaya9550506673@gmail.com</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; Thanks for visiting</p>
+</footer>
+
+</body>
+</html>
